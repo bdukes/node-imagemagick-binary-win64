@@ -1,15 +1,26 @@
 {
-  "name": "graphicsmagick-binary-win64",
-  "version": "1.3.22",
+  "name": "imagemagick-binary-win64",
+  "version": "6.9.1",
   "description": "GraphicsMagick Binaries for Windows (64-bit)",
   "main": "index.js",
   "scripts": {},
   "bin": {
-    "gm": "bin/gm"
+    "compare": "bin/compare",
+    "composite": "bin/composite",
+    "conjure": "bin/conjure",
+    "convert": "bin/convert",
+    "dcraw": "bin/dcraw",
+    "ffmpeg": "bin/ffmpeg",
+    "hp2xx": "bin/hp2xx",
+    "identify": "bin/identify",
+    "IMDisplay": "bin/IMDisplay",
+    "mogrify": "bin/mogrify",
+    "montage": "bin/montage",
+    "stream": "bin/stream"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tracker1/graphicsmagick-binary-win64.git"
+    "url": "git://github.com/bdukes/imagemagick-binary-win64.git"
   },
   "keywords": [
     "graphicsmagick",
@@ -17,10 +28,10 @@
     "graphics",
     "image"
   ],
-  "author": "Michael J. Ryan (http://www.tracker1.info/)",
+  "author": "Brian Dukes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tracker1/graphicsmagick-binary-win64/issues"
+    "url": "https://github.com/bdukes/imagemagick-binary-win64/issues"
   },
-  "homepage": "https://github.com/tracker1/graphicsmagick-binary-win64"
+  "homepage": "https://github.com/bdukes/imagemagick-binary-win64"
 }

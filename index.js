@@ -1,7 +1,23 @@
 'use strict';
 
-var path = require('path'),
-  binPath = path.resolve(__dirname, 'gm/gm.exe')
-  ;
+var path = require('path');
+var commands = [
+    'compare',
+    'composite',
+    'conjure',
+    'convert',
+    'dcraw',
+    'ffmpeg',
+    'hp2xx',
+    'identify',
+    'IMDisplay',
+    'mogrify',
+    'montage',
+    'stream',
+];
+var paths = { };
+commands.forEach(function (command) {
+  paths[command] = path.resolve(__dirname, 'imagemagick/' + command + '.exe');
+});
 
-module.exports.path = binPath
+module.exports.paths = paths;

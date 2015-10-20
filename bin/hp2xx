@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+'use strict';
+
+var spawn = require('child_process').spawn;
+var paths = require('../').paths;
+var command = 'hp2xx';
+
+process.bin = process.title = command;
+
+// get passed in arguments
+var args = Array.prototype.slice.call(process.argv);
+args.splice(0,2);
+
+var spawnedProcess = spawn(paths[command], args, { stdio: 'inherit', });
+
+// when process event for exit comes in, pass it down...
+process.on('SIGINT', spawnedProcess.kill.bind(spawnedProcess, 'SIGINT'));
+process.on('SIGTERM', spawnedProcess.kill.bind(spawnedProcess, 'SIGTERM'));
+process.on('SIGHUP', spawnedProcess.kill.bind(spawnedProcess, 'SIGHUP'));
+process.on('SIGBREAK', spawnedProcess.kill.bind(spawnedProcess, 'SIGBREAK'));
